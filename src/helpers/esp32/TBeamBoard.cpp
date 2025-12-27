@@ -13,10 +13,9 @@ static void setPmuFlag()
 }
 
 void TBeamBoard::begin() {
-    
     ESP32Board::begin();
 
-    power_init();
+    //power_init();
 
     //Configure user button
     pinMode(PIN_USER_BTN, INPUT);

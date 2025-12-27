@@ -8,7 +8,8 @@
 #include <helpers/AutoDiscoverRTCClock.h>
 #include <helpers/sensors/EnvironmentSensorManager.h>
 #ifdef DISPLAY_CLASS
-  #include <helpers/ui/SSD1306Display.h>
+//  #include <helpers/ui/SSD1306Display.h>
+  #include "helpers/ui/NullDisplayDriver.h"
   #include <helpers/ui/MomentaryButton.h>
 #endif
 
@@ -18,6 +19,7 @@ extern AutoDiscoverRTCClock rtc_clock;
 extern EnvironmentSensorManager sensors;
 
 #ifdef DISPLAY_CLASS
+  class NullDisplayDriver;
   extern DISPLAY_CLASS display;
   extern MomentaryButton user_btn;
 #endif

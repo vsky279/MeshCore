@@ -157,7 +157,8 @@ public:
 }
 
   uint16_t getBattMilliVolts(){
-    return PMU->getBattVoltage();
+    //return PMU->getBattVoltage();
+    return -1; // no battery
   }
 
   const char* getManufacturerName() const{
